@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐢 Minha Tartaruga LOGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 style="margin-top: 0;">🐢 Minha Tartaruga LOGO Interativa</h2>
+    
+    <div class="interface">
+        <div class="painel">
+            <span class="secao-titulo">Movimento</span>
+            <button onclick="window.controlar('pf')" style="background: #00ffcc; color: #111;">Frente (+50)</button>
+            
+            <span class="secao-titulo" style="margin-top: 10px;">Rotação</span>
+            <button onclick="window.controlar('pe')" style="background: #ffaa00; color: #111;">Esq. (↰ 45°)</button>
+            <button onclick="window.controlar('pd')" style="background: #ffaa00; color: #111;">Dir. (↱ 45°)</button>
+            
+            <span class="secao-titulo" style="margin-top: 10px;">Caneta</span>
+            <button id="btnCaneta" onclick="window.alternarCaneta()" style="background: #4caf50; color: #fff;">✏️ Desenhando</button>
+
+            <span class="secao-titulo" style="margin-top: 10px;">Cor da Linha</span>
+            <div class="grid-cores">
+                <button onclick="window.mudarCor('rgb(0,255,204)', event)" style="background: rgb(0,255,204); width: 35px; height: 35px; border: 2px solid white; border-radius: 4px;"></button>
+                <button onclick="window.mudarCor('rgb(255,0,85)', event)" style="background: rgb(255,0,85); width: 35px; height: 35px; border-radius: 4px;"></button>
+                <button onclick="window.mudarCor('rgb(255,234,0)', event)" style="background: rgb(255,234,0); width: 35px; height: 35px; border-radius: 4px;"></button>
+                <button onclick="window.mudarCor('rgb(30,144,255)', event)" style="background: rgb(30,144,255); width: 35px; height: 35px; border-radius: 4px;"></button>
+                <button onclick="window.mudarCor('rgb(255,255,255)', event)" style="background: rgb(255,255,255); width: 35px; height: 35px; border-radius: 4px;"></button>
+                <button onclick="window.mudarCor('arcoiris', event)" style="background: linear-gradient(45deg, red, yellow, green, blue); width: 35px; height: 35px; border-radius: 4px;" title="Caneta Arco-Íris"></button>
+            </div>
+
+            <span class="secao-titulo" style="margin-top: 10px;">Sistema</span>
+            <button onclick="window.controlar('limpe')" style="background: #ff0055; color: #fff;">Limpar Tela</button>
+        </div>
+
+        <div class="canvas-area">
+            <canvas id="canvasLogo" width="600" height="400"></canvas>
+        </div>
+    </div>
+    
+    <input type="text" id="console" placeholder="Ou use comandos: pf 50, pd 90, sc, pc, limpe..." autofocus>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
